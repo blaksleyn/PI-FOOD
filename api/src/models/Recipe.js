@@ -27,6 +27,11 @@ module.exports = (sequelize) => {
     },
     steps:{
       type: DataTypes.STRING
+    },
+    createdInDB:{
+      type:DataTypes.BOOLEAN,
+      allowNull:false,
+      defaultValue:true
     }
   });
 };

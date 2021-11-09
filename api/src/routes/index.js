@@ -96,7 +96,8 @@ router.post("/recipe", async (req, res) => {
         score,
         diets,
         healthyscore,
-        steps
+        steps,
+        createdInDB,
     } = req.body
 
     let newRecipe = await Recipe.create ({
@@ -104,7 +105,8 @@ router.post("/recipe", async (req, res) => {
         summary,
         score,
         healthyscore,
-        steps
+        steps,
+        createdInDB
     })
     let typesRecipesDB = await Diets.findAll({
         where : { name: diets }
